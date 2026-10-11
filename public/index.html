@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foresight · Calibrate your confidence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="glow" id="glow"></div>
+<main>
+  <header class="hero">
+    <h1>Are you as right<br>as you think you are?</h1>
+    <p>Log a prediction with how sure you are. Resolve it later. Foresight plots your confidence against reality.</p>
+  </header>
+
+  <section class="grid stats" id="stats"></section>
+
+  <section class="card chart-card">
+    <div class="chart-head"><h2>Calibration curve</h2><p id="verdict" class="verdict"></p></div>
+    <div id="chart"></div>
+    <p class="legend"><span class="dash"></span>Perfect calibration <span class="dot"></span>Your results (size = predictions)</p>
+  </section>
+
+  <section class="two">
+    <form class="card" id="form">
+      <h2>New prediction</h2>
+      <input id="text" placeholder="I will ship the dashboard by Friday" maxlength="200" required autocomplete="off">
+      <label>Confidence <b id="confVal">70%</b></label>
+      <input type="range" id="conf" min="50" max="99" value="70">
+      <select id="cat"><option>Work</option><option>Fitness</option><option>Gaming</option><option>Content</option><option>Life</option></select>
+      <button class="btn" type="submit">Lock it in</button>
+      <p class="err" id="err"></p>
+    </form>
+    <div class="card"><h2>Weakest categories</h2><div id="cats"></div></div>
+  </section>
+
+  <section class="card"><h2>Predictions</h2><div id="list"></div></section>
+  <footer>Foresight · built by <a href="https://github.com/manashwebdev">manashwebdev</a></footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

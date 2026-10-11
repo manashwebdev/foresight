@@ -1,0 +1,9 @@
+{
+  "name": "foresight",
+  "version": "1.0.0",
+  "description": "A calibration lab for your predictions. Log what you expect, resolve it later, and see how honest your confidence really is.",
+  "main": "server/server.js",
+  "scripts": { "start": "node server/server.js", "dev": "node --watch server/server.js" },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}
